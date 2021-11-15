@@ -1,0 +1,4 @@
+
+wget https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.0.4/deploy/static/provider/cloud/deploy.yaml
+wget https://raw.githubusercontent.com/metallb/metallb/v0.11.0/manifests/namespace.yaml 
+wget https://raw.githubusercontent.com/metallb/metallb/v0.11.0/manifests/metallb.yaml

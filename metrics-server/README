@@ -1,0 +1,10 @@
+wget -o metrics-server.yaml https://github.com/kubernetes-sigs/metrics-server/releases/latest/download/components.yaml
+
+打开metrics-server.yaml添加如下配置：
+- --kubelet-insecure-tls
+# kubelet 的10250端口使用的是https协议，连接需要验证tls证书，--kubelet-insecure-tls不验证客户端证书。
+
+更换images镜像地址：registry.cn-hangzhou.aliyuncs.com/google_containers/metrics-server:v0.5.1
+```
+kubectl apply -f metrics-server.yaml
+```
